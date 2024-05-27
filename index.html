@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--CSS Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Carrito de Compras JS 1.1</title>
+</head>
+
+<body style="background-color:lightblue">
+
+<header>
+  <div class="container-fluid p-4 text-bg-primary text-center">
+    <img src="img/logo2.png" style="height: 100px" alt="Logo Principal de la Pagina"><img>
+    <h1>Info Store - Tienda Online</h1>
+  </div>
+</header>
+  
+<main>
+  <h2>Productos</h2>
+  <div class="container">
+    <!-- Modal de agradecimiento por agregar un producto-->
+    <div class="modal-dialog modal-dialog-centered modal fade" id="modalSinProductos">
+      Gracias
+    </div>
+    <!-- Generador de Cards de Productos-->
+    <div class="row" id="itemProducto" style="display:flex;justify-content:center;">
+    </div>
+  </div>
+  <!-- Modal Carrito para ver Productos-->
+  <div class="modal fade" id="modalPago" aria-labelledby="ModalLg" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-4" id="modalFinal">Carrito de Compras</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h2>Resumen de Compra</h2>
+          <div class="container">
+            <!-- Visualizador de Productos--> 
+            <div class="list-group" id="itemsCompra">
+            </div>
+          </div>
+          <!-- Visualizador de Total-->
+          <div id="valorFinalCompra"></div>
+          <!-- Botones actualizables Cerrar Finalizar Borrar-->
+          <div id="botonesFinalCompra">
+          <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Seguir Comprando</button>
+          <button type="button" class="btn btn-danger btn-sm" onclick="vaciarCarrito()" >Limpiar Carrito</button>
+          <button type="button" class="btn btn-primary btn-sm" onclick="finalizarCarrito()">Finalizar Compra</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container-fluid p-1 text-bg-primary text-center">
+    <h6 >Info Store</h6>
+  </div>
+</footer>
+
+<!-- Carga JS Propio --> 
+<script src="js/main.js"></script>
+ <!-- Carga JS Externo --> 
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
