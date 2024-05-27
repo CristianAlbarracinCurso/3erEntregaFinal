@@ -293,7 +293,7 @@ function enviarCarrito(){
   <div class="container p-4 text-center">
     <div class="alert alert-success p-1" role="alert">
       <h3 class="alert-heading">Compra Finalizada</h3>
-      <div>
+      <div class="p-4 text-center">
       <img src="./img/gracias.png" class="mx-auto d-block w-25 p-2" alt="Saludo de agradecimiento por la compra"> 
       <strong>Sanjay, ayuda a esta persona con su compra, y mientras lo haces...kenkere kumbaya, baya </strong>
       </div>
