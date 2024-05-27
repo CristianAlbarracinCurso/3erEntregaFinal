@@ -294,7 +294,7 @@ function enviarCarrito(){
     <div class="alert alert-success p-1" role="alert">
       <h3 class="alert-heading">Compra Finalizada</h3>
       <div>
-      <img src="/img/gracias.png" class="mx-auto d-block w-25 p-2" alt="Saludo de agradecimiento por la compra"> 
+      <img src="./img/gracias.png" class="mx-auto d-block w-25 p-2" alt="Saludo de agradecimiento por la compra"> 
       <strong>Sanjay, ayuda a esta persona con su compra, y mientras lo haces...kenkere kumbaya, baya </strong>
       </div>
       <button type="button" class="btn btn-success btn-sm" onclick="vaciarCarrito()">Muchas gracias, vuelva prontos!</button>
