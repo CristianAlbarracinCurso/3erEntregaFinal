@@ -8,17 +8,16 @@ class Producto{
       this.descripcion = descripcion;
   }
 }
+let productosBase = [];
 
 // Cargar los datos desde el archivo Jsson
-async function cargarDatosDesdeJSON() {
+const pedirDatos = async () => {
   try {
     const response = await fetch('./json/productosBase.json');
     const data = await response.json();
     productosBase = data.map(producto => new Producto(producto.nombre, producto.id, producto.precio, producto.stock, producto.descripcion));
-    mostrarProductos();
-    cargarCarritoDesdeLocalStorage();
   } catch (error) {
-    console.error('Error al cargar los datos desde el JSON:', error);
+    console.error('Revisar el Error al cargar los datos desde el JSON:', error);
   }
 }
 
@@ -305,10 +304,12 @@ function enviarCarrito(){
 }
   
 // Testeo
-const app = ()=>{
-  cargarDatosDesdeJSON();
+const app = async  ()=>{
+ //cargarDatosDesdeJSON();
+  await pedirDatos();
   mostrarProductos();
   cargarCarritoDesdeLocalStorage();
+ 
 }
 
 //ejecuto app
